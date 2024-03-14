@@ -10,6 +10,10 @@ Add yandex speech kit key in settings.py file
 yandex_secret = "secret"
 ```
 
+Run script
+
 ```bash
 python run_voicer2.py
 ```
+
+Start input by hols middle muse button
