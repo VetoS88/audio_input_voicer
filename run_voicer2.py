@@ -98,7 +98,7 @@ class Voicer:
             pyautogui.hotkey("ctrl", "a")
             pyperclip.copy(text)
             pyautogui.hotkey("ctrl", "v")
-            pyperclip.copy(text)
+            pyperclip.copy("")
         print('Finish')
 
     def monitor_input(self):
