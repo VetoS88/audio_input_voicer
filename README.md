@@ -16,4 +16,4 @@ Run script
 python run_voicer2.py
 ```
 
-Start input by hols middle muse button
+Start input by hold middle mouse button
