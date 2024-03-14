@@ -9,3 +9,7 @@ Add yandex speech kit key in settings.py file
 ```python
 yandex_secret = "secret"
 ```
+
+```bash
+python run_voicer2.py
+```
