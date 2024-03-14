@@ -10,7 +10,7 @@ from speechkit import configure_credentials, model_repository
 from speechkit.common.utils import creds
 from speechkit.stt import AudioProcessingType
 
-from voicer.settings import yandex_secret
+from settings import yandex_secret
 
 
 # Настройки потокового распознавания.
