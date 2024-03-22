@@ -19,6 +19,7 @@ python-xlib==0.33
 python3-xlib==0.15
 pytweening==1.2.0
 requests==2.31.0
+ruff==0.3.4
 six==1.16.0
 SpeechRecognition==3.10.1
 typing_extensions==4.10.0

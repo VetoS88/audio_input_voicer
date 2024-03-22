@@ -17,3 +17,10 @@ python run_voicer2.py
 ```
 
 Start input by hold middle mouse button
+
+
+
+## ruff check
+```bash
+ruff check --fix
+```
