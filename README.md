@@ -16,7 +16,14 @@ Run script
 python run_voicer2.py
 ```
 
+## Available modes
+- Full phrase  
 Start input by hold middle mouse button
+- Continue  
+Press shift then hold middle mouse button
+- Replace   
+Highlight phrase and press shift then hold middle mouse button
+
 
 
 
