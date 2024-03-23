@@ -107,9 +107,12 @@ class Voicer:
 
         def on_mouse_click(x, y, button, pressed):
             if button.name == 'middle':
-                self._input_active = pressed
-                if self._input_active:
+                if pressed:
+                    self._input_active = pressed
                     threading.Thread(target=self.run_input).start()
+                else:
+                    time.sleep(2)
+                    self._input_active = pressed
 
         mouse_listener = mouse.Listener(on_click=on_mouse_click)
         mouse_listener.start()
