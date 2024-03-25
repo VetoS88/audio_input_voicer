@@ -111,7 +111,7 @@ class Voicer:
                     self._input_active = pressed
                     threading.Thread(target=self.run_input).start()
                 else:
-                    time.sleep(2)
+                    time.sleep(1)
                     self._input_active = pressed
 
         mouse_listener = mouse.Listener(on_click=on_mouse_click)
@@ -122,12 +122,14 @@ class Voicer:
                 print(f"Shift pressed in_place mode ON")
                 self.in_place = True
 
-        # def key_board_releases(key):
-        #     if key == keyboard.Key.ctrl:
-        #         self.ctr_pressed = False
+        def key_board_releases(key):
+            if key == keyboard.Key.shift:
+                if not self._is_running:
+                    print(f"Shift pressed in_place mode OFF")
+                    self.in_place = False
 
         keyboard_listener = keyboard.Listener(
-            on_press=key_board_press
+            on_press=key_board_press, on_release=key_board_releases
         )
         keyboard_listener.start()
 
