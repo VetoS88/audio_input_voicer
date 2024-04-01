@@ -1,5 +1,7 @@
+import os
 import threading
 import time
+from pathlib import Path
 
 import pyaudio
 import pyautogui
@@ -10,7 +12,6 @@ from speechkit import configure_credentials, model_repository
 from speechkit.common.utils import creds
 from speechkit.stt import AudioProcessingType
 
-from settings import yandex_secret
 
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -139,5 +140,9 @@ class Voicer:
 
 
 if __name__ == '__main__':
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    file_path = Path(BASE_DIR, 'ya_key')
+    with open(file_path) as key_file:
+        yandex_secret = key_file.readline().strip()
     voicer = Voicer(yandex_secret)
     voicer.monitor_input()

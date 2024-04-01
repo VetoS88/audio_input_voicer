@@ -5,9 +5,9 @@ Disable middle button mouse
 xmodmap -e "pointer = 1 25 3 4 5 6 7 8 9"
 ```
 
-Add yandex speech kit key in settings.py file
-```python
-yandex_secret = "secret"
+Add yandex speech kit key in 'ya_key' file
+```text
+secret
 ```
 
 Run script
@@ -30,4 +30,9 @@ Highlight phrase and press shift then hold middle mouse button
 ## ruff check
 ```bash
 ruff check --fix
+```
+
+## pyinstaller
+```bash
+pip install pyinstaller
 ```
